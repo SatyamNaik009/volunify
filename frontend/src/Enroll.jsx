@@ -9,13 +9,13 @@ const Enroll = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const fetchOpportunities = async () => {
+    const fetchCities = async () => {
       try {
         const data = await ApiService.getAllCities();
         setCities(data);
         console.log("cities", cities);
       } catch (error) {
-        setError("Failed to fetch opportunities.");
+        setError("Failed to fetch cities.");
       }
     };
 
