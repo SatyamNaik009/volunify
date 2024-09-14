@@ -47,7 +47,7 @@ export default class ApiService {
     return response.data;
   }
 
-  static async getAllOpportunities(userId) {
+  static async getAllOpportunitiesOfUser(userId) {
     const response = await axios.get(
       `${this.BASE_URL}/api/user/opportunity/${userId}`,
       {}
