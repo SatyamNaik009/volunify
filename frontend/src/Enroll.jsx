@@ -19,7 +19,7 @@ const Enroll = () => {
       }
     };
 
-    fetchOpportunities();
+    fetchCities();
   }, []);
 
   useEffect(() => {
