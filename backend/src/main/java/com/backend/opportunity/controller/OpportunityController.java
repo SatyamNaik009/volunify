@@ -43,4 +43,11 @@ public class OpportunityController {
         OpportunityDetails opportunityDetails = opportunityService.getOpportunity(userId);
         return ResponseEntity.status(HttpStatus.CREATED).body(opportunityDetails);
     }
+
+    @GetMapping("/opportunity/{city}")
+    public ResponseEntity<OpportunityList> getAllOpportunitiesByCity(@PathVariable String city) {
+        OpportunityList opportunityDetailsList = opportunityService.getAllOpportunitiesByCity(city);
+        return ResponseEntity.status(HttpStatus.CREATED).body(opportunityDetailsList);
+    }
+
 }

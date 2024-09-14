@@ -11,4 +11,6 @@ public interface OpportunityRepository extends JpaRepository<Opportunity,Long> {
 
     @Query("SELECT DISTINCT o.city FROM Opportunity o WHERE o.city IS NOT NULL")
     List<String> findAllDistinctCities();
+
+    List<Opportunity> findAllByCity(String city);
 }

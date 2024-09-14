@@ -18,4 +18,6 @@ public interface OpportunityService {
     OpportunityDetails getOpportunity(Long opportunityId);
 
     List<String> getAllCities();
+
+    OpportunityList getAllOpportunitiesByCity(String city);
 }

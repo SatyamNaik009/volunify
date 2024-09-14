@@ -19,12 +19,17 @@ export const Login = (props) => {
     }
 
     try {
-      const response = await ApiService.loginUser({ email, pass });
+      const response = await ApiService.loginUser({ email, password: pass });
 
-      localStorage.setItem("name", response.name);
-      localStorage.setItem("userId", response.userId);
+      if (response.message == "Successful") {
+        localStorage.setItem("name", response.name);
+        localStorage.setItem("userId", response.userId);
+        console.log(localStorage.getItem("userId"));
 
-      navigate("/Enroll", { replace: true });
+        navigate("/Enroll", { replace: true });
+      } else {
+        console.log("vgvgcdj");
+      }
     } catch (error) {
       setError("Enter valid credentials");
       setTimeout(() => setError(""), 5000);

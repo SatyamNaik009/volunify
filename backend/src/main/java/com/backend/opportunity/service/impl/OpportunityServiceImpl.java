@@ -78,4 +78,13 @@ public class OpportunityServiceImpl implements OpportunityService {
         List<String> cities=opportunityRepository.findAllDistinctCities();
         return cities;
     }
+
+    @Override
+    public OpportunityList getAllOpportunitiesByCity(String city) {
+        List<Opportunity> opportunities=opportunityRepository.findAllByCity(city);
+        List<OpportunityDetails> opportunityDetailsList=opportunities.stream()
+                .map(opportunityMapper::toOpportunityDetails)
+                .collect(Collectors.toList());
+        return opportunityMapper.toOpportunityList(opportunityDetailsList);
+    }
 }

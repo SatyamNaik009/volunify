@@ -24,6 +24,14 @@ export default class ApiService {
     return response.data;
   }
 
+  static async getAllOpportunitiesByCity() {
+    const response = await axios.get(
+      `${this.BASE_URL}/api/oppportunity/${city}`,
+      {}
+    );
+    return response.data;
+  }
+
   static async getAllCities() {
     const response = await axios.get(`${this.BASE_URL}/auth/getCities`, {});
     return response.data;
