@@ -76,7 +76,7 @@ Ready to make a difference? Join our community of passionate volunteers, organiz
   <h2 style={{textAlign:"center"}}>“Sometimes miracles are just good people with kind hearts.”</h2>
   <h1 style={{textAlign:"center"}}>“You can be the one"</h1>
   <button style={{background:"grey",color:"white",border:"1px solid black",borderRadius:"10%",marginLeft:"560px",height:"45px",width:"120px",padding:"2px 2px 2px 2px"}}>JOIN NOW <ArrowForwardIcon /></button>
-  </div></div>
+  </div><br></br></div>
 
   )
 }
