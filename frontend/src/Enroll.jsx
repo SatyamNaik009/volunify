@@ -11,7 +11,7 @@ const Enroll = () => {
   useEffect(() => {
     const fetchCities = async () => {
       try {
-        const data = await ApiService.getAllCities(); 
+        const data = await ApiService.getAllCities();
         setCities(data);
         console.log("cities", cities);
       } catch (error) {
