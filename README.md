@@ -1,0 +1,1 @@
+Volunifyy is a platform that connects volunteers with non-profit organizations and events in their community. The site aims to make volunteering easy, accessible, and rewarding for individuals, while also helping non-profits find the support they need
