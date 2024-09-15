@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api")
 @CrossOrigin
@@ -22,6 +24,11 @@ public class EnrollmentController {
 
         Boolean flag = enrollmentService.enrollUser(userId, opportunityId);
         return ResponseEntity.status(HttpStatus.CREATED).body(flag);
+    }
 
+    @GetMapping("/user/enroll/{userId}")
+    public ResponseEntity<List<EnrollmentDetails>> getUserEnroll(@PathVariable Long userId) {
+        List<EnrollmentDetails> flag = enrollmentService.getUserEnroll(userId);
+        return ResponseEntity.status(HttpStatus.OK).body(flag);
     }
 }

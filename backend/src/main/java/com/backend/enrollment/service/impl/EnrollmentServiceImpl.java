@@ -14,6 +14,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EnrollmentServiceImpl implements EnrollmentService {
 
@@ -48,6 +50,19 @@ public class EnrollmentServiceImpl implements EnrollmentService {
         System.err.println("Enrollment failed: " + e.getMessage());
         return false;
     }
+    }
+
+    @Override
+    public List<EnrollmentDetails> getUserEnroll(Long userId) {
+        List<Enrollment> enrollments = enrollmentRepository.findByUserId(userId);
+
+        return enrollments.stream()
+                .map(enrollment -> new EnrollmentDetails(
+                        enrollment.getId(),
+                        enrollment.getUser().getId(),
+                        enrollment.getOpportunity().getId()
+                ))
+                .toList();
     }
 
     private void sendEnrollmentEmailToAdmin(User admin, User user,Opportunity opportunity) {
