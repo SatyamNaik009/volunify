@@ -1,0 +1,54 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.enroll-button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enroll-button:hover {
+  background-color: #e64a19;
+}
+
+.enroll-section {
+  text-align: center;
+}
+
+.enroll-now-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.enroll-now-button:hover {
+  background-color: #388e3c;
+}
+
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
